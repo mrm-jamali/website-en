@@ -1,0 +1,47 @@
+#write-story-box {
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.write-story {
+    width: 90%;
+    /* background-color: blueviolet; */
+}
+
+.write-story h3 {
+    text-align: center;
+    font-size: 47px;
+    font-family: "Abril Fatface";
+    margin-bottom: 60px;
+}
+
+
+@media only screen and (min-width: 460px) and (max-width:768px) {
+    nav .btn-part {
+        /* background-color: aqua; */
+        width: 70%;
+    }
+
+    nav .register-btn {
+        /* background-color: brown; */
+        width: 80%;
+    }
+
+    .register-btn .switch {
+        display: flex !important;
+    }
+
+    .banner {
+
+        padding: 3px 20px;
+    }
+
+    .banner-title h1 {
+        font-size: 45px;
+       
+    }
+    .write-story h3 {
+        font-size: 35px;
+    }
+    
+}

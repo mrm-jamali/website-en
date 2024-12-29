@@ -1,0 +1,585 @@
+nav {
+    /* background-color: #fcc3c3; */
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    height: 400px;
+    background-color: #B6E2E3;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    background: #B6E2E3;
+    padding: 3px 60px;
+}
+
+nav .btn-part {
+    width: 30%;
+}
+
+.banner-title {
+    background-color: #B6E2E3;
+    margin: 35px;
+}
+
+#banner-title h1 {
+    font-size: 60px;
+}
+
+.img-banner {
+    width: 400px;
+    height: 310px;
+}
+
+.inside-detail-story {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 15px;
+
+}
+
+.first-part-story-content {
+    width: 90%;
+    /* background-color: cadetblue; */
+    display: flex;
+    margin-left: 10px;
+}
+
+.second-part-story-content {
+    width: 90%;
+    margin-top: 30px;
+    /* background-color: burlywood; */
+
+}
+
+.second-part-story-content p {
+    line-height: 28px;
+    font-size: 16px;
+    text-align: justify;
+
+}
+
+
+
+
+.write-comment {
+    width: 93%;
+    /* background: wheat; */
+    margin-top: 0px;
+    position: relative;
+}
+
+/* آیکون کامنت */
+.comment-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 15px;
+    font-family: "Abril Fatface";
+    margin-left: 20px;
+}
+
+.comment-icon:hover {
+    color: var(--color-secondary);
+}
+
+/* کادر کامنت */
+#commentBox {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    margin-top: 10px;
+    padding: 0;
+    /* border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; */
+    opacity: 0;
+}
+
+#commentBox.active {
+    max-height: 200px;
+    opacity: 1;
+    padding: 10px;
+}
+
+/* فرم نوشتن کامنت */
+#commentForm {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+#commentForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+#commentForm button {
+
+    padding: 10px 20px;
+    background-color: #19b417;
+    color: white;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#commentForm button:hover {
+    background-color: #0cd010;
+}
+
+/* لیست نظرات */
+#commentsSection {
+    margin-top: 20px;
+}
+
+#commentsSection h4 {
+    margin-bottom: 10px;
+}
+
+#commentsList {
+    list-style: none;
+    padding: 0;
+}
+
+#commentsList li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+
+
+.img-story {
+    width: 35%;
+    height: 300px;
+    background-color: #fcc3c3;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px 10px 150px 10px;
+    /* background-color: blueviolet; */
+
+}
+
+.img-story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 150px 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.text-story {
+    width: 60%;
+    height: auto;
+    /* background-color: chocolate;  */
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.text-story .title-story {
+    width: 90%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title-story h3 {
+    font-weight: 600;
+    font-size: 30px;
+    font-style: oblique;
+    color: var(--color-primary);
+    font-family: "Abril Fatface";
+}
+
+.title-story p {
+    font-size: 14px;
+    margin-left: 20px;
+    font-style: italic;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Abril Fatface";
+}
+
+
+.content-story {
+    width: 96%;
+    height: auto;
+
+}
+
+.content-story p {
+    line-height: 26px;
+    font-size: 16px;
+    font-style: oblique;
+}
+
+.container-story {
+    margin-top: -35px !important;
+
+}
+
+
+/* footer */
+
+.footer-container {
+    width: 100%;
+    height: 270px;
+    padding: 60px 0 0 0;
+    margin-top: 70px;
+}
+
+
+
+#top-bar {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.connection-information-story {
+    width: 95%;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.connection-information-story .part-text {
+    width: 45%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.part-text #text- h2 {
+    font-size: 37px;
+}
+
+
+
+.part-text #phone-part {
+    height: 80px;
+}
+
+#call-us span {
+    font-size: 13px;
+    font-family: "Abril Fatface";
+    padding: 10px;
+}
+
+.connection-information-story .social-part {
+    display: flex;
+    width: 42%;
+    height: auto;
+}
+
+.social-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-part p {
+    font-size: 23px;
+    text-align: center;
+}
+
+
+
+
+/* responsive */
+@media only screen and (min-width: 756px) and (max-width:1150px) {
+    .footer-container {
+        height: 500px;
+        /* background-color: blueviolet; */
+        margin-bottom: -25px;
+        padding-top: 0;
+    }
+
+    .footer-container footer {
+        width: 100%;
+    }
+
+    .connection-information-story {
+        width: 100%;
+        flex-direction: column;
+        /* margin-top:-50px; */
+    }
+
+    .connection-information-story .part-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+        /* margin-top: -110px; */
+        margin-top: 100px;
+    }
+
+    .connection-information-story .part-text .text- {
+        width: 100%;
+    }
+
+    .connection-information-story .social-part {
+        width: 100%;
+        /* padding: 66px 10px; */
+        /* margin-bottom: -50px; */
+        margin-top: 50px;
+        /* background-color: cadetblue; */
+
+    }
+
+    #bottom-bar {
+        margin-top: 130px !important;
+        /* background-color: #fcc3c3; */
+    }
+}
+
+
+@media only screen and (min-width: 765px) and (max-width:951px) {
+    .img-banner {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (min-width: 460px) and (max-width:756px) {
+    nav .btn-part {
+        width: 70%;
+    }
+
+    nav .register-btn {
+        /* background-color: brown; */
+        width: 80%;
+    }
+
+    .register-btn .switch {
+        display: flex !important;
+    }
+
+    .banner {
+        padding: 3px 20px;
+    }
+
+    .img-banner {
+        width: 488px;
+        height: 202px;
+    }
+
+    .banner-title h1 {
+        font-size: 45px;
+        /* margin-top: -30px; */
+    }
+
+    .first-part-story-content {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .text-story {
+        width: 100%;
+        margin-left: 0px;
+        /* background-color: brown; */
+    }
+
+    .title-story h3 {
+        text-align: center;
+    }
+
+    .title-story p {
+        margin-left: 45px;
+    }
+
+    .text-story .content-story {
+        text-align: center;
+    }
+
+    .img-story {
+        width: 100%;
+    }
+
+    .title-best-story h2 {
+        font-size: 35px;
+    }
+
+
+    .footer-container {
+        height: 500px;
+        /* background-color: blueviolet; */
+        margin-bottom: -25px;
+        padding-top: 0;
+    }
+
+    .footer-container footer {
+        width: 100%;
+    }
+
+    .connection-information-story {
+        width: 100%;
+        flex-direction: column;
+        /* margin-top:-50px; */
+    }
+
+    .connection-information-story .part-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+        /* margin-top: -110px; */
+        margin-top: 100px;
+    }
+
+    .connection-information-story .part-text .text- {
+        width: 100%;
+    }
+
+    .connection-information-story .social-part {
+        width: 100%;
+        /* padding: 66px 10px; */
+        /* margin-bottom: -50px; */
+        margin-top: 50px;
+        /* background-color: cadetblue; */
+
+    }
+
+    #bottom-bar {
+        margin-top: 130px !important;
+        /* background-color: #fcc3c3; */
+    }
+}
+
+@media only screen and (min-width:375px) and (max-width:459px) {
+    .logo-part span p {
+
+        font-size: 18px;
+    }
+
+    .banner {
+        padding: 45px 0px;
+    }
+
+    .banner-title h1 {
+        font-size: 34px !important;
+        margin-top: -30px;
+    }
+
+    .banner-title h2 {
+        font-size: 19px;
+    }
+
+    .first-part-story-content {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .text-story {
+        width: 100%;
+        margin-left: 0px;
+        /* background-color: brown; */
+    }
+
+    .title-story h3 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .title-story p {
+        margin-left: 45px;
+    }
+
+    .text-story .content-story {
+        text-align: center;
+    }
+
+    .img-story {
+        width: 100%;
+    }
+
+    .title-best-story h2 {
+        font-size: 35px;
+    }
+
+    .footer-container {
+        height: 500px;
+        /* background-color: blueviolet; */
+        margin-bottom: -25px;
+        padding-top: 0;
+    }
+
+    .footer-container footer {
+        width: 100%;
+    }
+
+    .connection-information-story {
+        width: 100%;
+        flex-direction: column;
+        /* margin-top:-50px; */
+    }
+
+    .connection-information-story .part-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+        /* margin-top: -110px; */
+        margin-top: 100px;
+    }
+
+    /* .connection-information-story .part-text .text- {
+        width: 100%;
+    }
+    .part-text .text- h2 {
+        font-size: 23px;
+    } */
+
+    .connection-information-story .social-part {
+        width: 100%;
+        /* padding: 66px 10px; */
+        /* margin-bottom: -50px; */
+        margin-top: 50px;
+        /* background-color: cadetblue; */
+
+    }
+
+    #bottom-bar {
+        margin-top: 130px !important;
+        /* background-color: #fcc3c3; */
+    }
+
+
+    /* story page */
+    .write-story h3 {
+
+        font-size: 27px !important;
+    }
+
+    .toolbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .part-text #text- h2 {
+        font-size: 19px;}
+
+
+}

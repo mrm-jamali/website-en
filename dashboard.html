@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/dashboard.css">
+  <link rel="stylesheet" href="style/responsive.css">
+
+  <!-- لینک به CSS بوت‌استرپ از CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- <button id="logout">log out</button> -->
+  <div class="container-fluid container-first ">
+    <div class="row">
+      <!-- left-part -->
+      <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3  mt-5 d-sm-none d-md-none d-lg-none d-xl-flex  left-part-box ">
+        <div class="left-part-insside ml-4   ">
+          <div class="close-item d-lg-none">
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g id="Edit / Close_Square">
+                  <path id="Vector"
+                    d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M4 16.8002V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4801 4 18.9079 4.21799C19.2842 4.40973 19.5905 4.71547 19.7822 5.0918C20.0002 5.51962 20.0002 6.07967 20.0002 7.19978V16.7998C20.0002 17.9199 20.0002 18.48 19.7822 18.9078C19.5905 19.2841 19.2842 19.5905 18.9079 19.7822C18.4805 20 17.9215 20 16.8036 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2842 4.21799 18.9079C4 18.4801 4 17.9203 4 16.8002Z"
+                    stroke="#FF7427" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="logo-part pt-5 pl-3 ">
+            <svg id="logo-dashborad" width="64px" height="64px" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.9426 1.25L13.5 1.25C13.9142 1.25 14.25 1.58579 14.25 2C14.25 2.41421 13.9142 2.75 13.5 2.75H12C9.62178 2.75 7.91356 2.75159 6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62178 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62178 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.2484 16.0864 21.25 14.3782 21.25 12V10.5C21.25 10.0858 21.5858 9.75 22 9.75C22.4142 9.75 22.75 10.0858 22.75 10.5V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM16.7705 2.27592C18.1384 0.908029 20.3562 0.908029 21.7241 2.27592C23.092 3.6438 23.092 5.86158 21.7241 7.22947L15.076 13.8776C14.7047 14.2489 14.4721 14.4815 14.2126 14.684C13.9069 14.9224 13.5761 15.1268 13.2261 15.2936C12.929 15.4352 12.6169 15.5392 12.1188 15.7052L9.21426 16.6734C8.67801 16.8521 8.0868 16.7126 7.68711 16.3129C7.28742 15.9132 7.14785 15.322 7.3266 14.7857L8.29477 11.8812C8.46079 11.3831 8.56479 11.071 8.7064 10.7739C8.87319 10.4239 9.07761 10.0931 9.31605 9.78742C9.51849 9.52787 9.7511 9.29529 10.1224 8.924L16.7705 2.27592ZM20.6634 3.33658C19.8813 2.55448 18.6133 2.55448 17.8312 3.33658L17.4546 3.7132C17.4773 3.80906 17.509 3.92327 17.5532 4.05066C17.6965 4.46372 17.9677 5.00771 18.48 5.51999C18.9923 6.03227 19.5363 6.30346 19.9493 6.44677C20.0767 6.49097 20.1909 6.52273 20.2868 6.54543L20.6634 6.16881C21.4455 5.38671 21.4455 4.11867 20.6634 3.33658ZM19.1051 7.72709C18.5892 7.50519 17.9882 7.14946 17.4193 6.58065C16.8505 6.01185 16.4948 5.41082 16.2729 4.89486L11.2175 9.95026C10.801 10.3668 10.6376 10.532 10.4988 10.7099C10.3274 10.9297 10.1804 11.1676 10.0605 11.4192C9.96337 11.623 9.88868 11.8429 9.7024 12.4017L9.27051 13.6974L10.3026 14.7295L11.5983 14.2976C12.1571 14.1113 12.377 14.0366 12.5808 13.9395C12.8324 13.8196 13.0703 13.6726 13.2901 13.5012C13.468 13.3624 13.6332 13.199 14.0497 12.7825L19.1051 7.72709Z"
+                  fill="#FF7427"></path>
+              </g>
+            </svg>
+
+            <p class="logo-name">SayStory</p>
+          </div>
+          <div class="border-1 menu-bar-left-box">
+            <!-- <h2 class="mb-3 text-sm-center text-lg-left ml-lg-5 ">wellcome to dashboard</h2> -->
+            <ul class="text-center">
+              <li class="item" data-target="page11" id="home">
+                <span>
+                  <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M9 20H7C5.89543 20 5 19.1046 5 18V10.9199C5 10.336 5.25513 9.78132 5.69842 9.40136L10.6984 5.11564C11.4474 4.47366 12.5526 4.47366 13.3016 5.11564L18.3016 9.40136C18.7449 9.78132 19 10.336 19 10.9199V18C19 19.1046 18.1046 20 17 20H15M9 20V14C9 13.4477 9.44772 13 10 13H14C14.5523 13 15 13.4477 15 14V20M9 20H15"
+                        stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                  </svg>
+                </span>
+                <a id="first-link" href="#">Home</a></li>
+              <li class="item" data-target="page1">
+                <span>
+                  <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                        stroke="#8d8b8b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                  </svg>
+                </span>
+                <a href="#page1">users</a>
+              </li>
+              <li class="item" data-target="page2">
+                <span><svg width="32px" height="32px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"
+                    style="enable-background:new 0 0 192 192" xml:space="preserve" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M104.1 65.7v88.5c6.1-6.3 18.3-17.2 37-23.4 11.5-3.8 21.6-4.6 28.9-4.5V37.8c-8 .5-18.7 2.1-30.7 6.5-16.5 6.2-28.2 15.1-35.2 21.4zm-16.2 0v88.5c-6.1-6.3-18.3-17.2-37-23.4-11.5-3.8-21.6-4.6-28.9-4.5V37.8c8 .5 18.7 2.1 30.7 6.5 16.5 6.2 28.2 15.1 35.2 21.4z"
+                        style="fill:none;stroke:#8d8b8b;stroke-width:12;stroke-linejoin:round;stroke-miterlimit:10">
+                      </path>
+                    </g>
+                  </svg></span>
+                <a href="#page2">stories</a></li>
+              <li class="item" data-target="page3">
+                <span>
+                  <svg width="25px" height="25px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                    fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>comment-1</title>
+                      <desc>Created with Sketch Beta.</desc>
+                      <defs> </defs>
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        sketch:type="MSPage">
+                        <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-100.000000, -255.000000)"
+                          fill="#8d8b8b">
+                          <path
+                            d="M116,281 C114.832,281 113.704,280.864 112.62,280.633 L107.912,283.463 L107.975,278.824 C104.366,276.654 102,273.066 102,269 C102,262.373 108.268,257 116,257 C123.732,257 130,262.373 130,269 C130,275.628 123.732,281 116,281 L116,281 Z M116,255 C107.164,255 100,261.269 100,269 C100,273.419 102.345,277.354 106,279.919 L106,287 L113.009,282.747 C113.979,282.907 114.977,283 116,283 C124.836,283 132,276.732 132,269 C132,261.269 124.836,255 116,255 L116,255 Z"
+                            id="comment-1" sketch:type="MSShapeGroup"> </path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <a href="#page3">comments</a></li>
+              <li class="item" data-target="page4">
+                <span>
+                  <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M12 16.3333V21H13L19 15V14H14.3333C13.2334 14 12.6834 14 12.3417 14.3417C12 14.6834 12 15.2334 12 16.3333Z"
+                        fill="#2A4157" fill-opacity="0.24"></path>
+                      <path
+                        d="M12.1716 21H9C7.11438 21 6.17157 21 5.58579 20.4142C5 19.8284 5 18.8856 5 17V7C5 5.11438 5 4.17157 5.58579 3.58579C6.17157 3 7.11438 3 9 3H15C16.8856 3 17.8284 3 18.4142 3.58579C19 4.17157 19 5.11438 19 7V14.1716C19 14.5803 19 14.7847 18.9239 14.9685C18.8478 15.1522 18.7032 15.2968 18.4142 15.5858L13.5858 20.4142C13.2968 20.7032 13.1522 20.8478 12.9685 20.9239C12.7847 21 12.5803 21 12.1716 21Z"
+                        stroke="#8d8b8b" stroke-width="1.2"></path>
+                      <path d="M12 21V16.3333C12 15.2334 12 14.6834 12.3417 14.3417C12.6834 14 13.2334 14 14.3333 14H19"
+                        stroke="#8d8b8b" stroke-width="1.2"></path>
+                    </g>
+                  </svg>
+                </span>
+                <a href="#">new story</a></li>
+              <li class="item" data-target="page5"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- right-part -->
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 align-items-center right-box">
+        <!-- top-menu -->
+        <div class="row  align-items-start pt-sm-4 pt-lg-5   ">
+          <!-- search part -->
+          <div
+            class="col-sm-12 col-md-12 col-lg-4 col-xl-6 d-flex mb-sm-4 mb-md-5 order-sm-2  order-lg-2 order-xl-1 justify-content-sm-center ">
+
+            <div class="search-box mt-0" id="srch-box">
+              <div class="search">
+                <input placeholder="Search..." type="text">
+                <button type="submit">Go</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- notifacation bar -->
+          <div
+            class="col-sm-6 col-md-4 col-lg-2 col-xl-2   order-sm-1   order-lg-1 order-xl-2 mr-md-5 mb-xl-3  mb-sm-4  ">
+            <div id="notification-bar">
+              <div class="hamburger-dashbaord d-xl-none ">
+                <svg fill="#000000" width="42px" height="42px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
+                  id="Glyph" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M26,16c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,14,26,14.896,26,16z"
+                      id="XMLID_314_"></path>
+                    <path d="M26,8c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,6,26,6.896,26,8z"
+                      id="XMLID_315_"></path>
+                    <path
+                      d="M26,24c0,1.104-0.896,2-2,2H8c-1.104,0-2-0.896-2-2s0.896-2,2-2h16C25.104,22,26,22.896,26,24z"
+                      id="XMLID_316_"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="switch-langage mt-xl-2">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                <label for="language-toggle"></label>
+                <span class="on">BN</span>
+                <span class="off">EN</span>
+              </div>
+              <div class="notif mt-xl-2">
+                <span class="bell-icon">
+                  <svg width="42px" height="42px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M10.2941 18.3529C9.23036 18.3529 7.85975 18.3529 6.77965 18.3529C5.99928 18.3529 5.5077 17.4924 5.87441 16.8035C6.6454 15.3553 7.64706 13.236 7.64706 12C7.64706 9.35294 7.64706 12.7566 7.64706 10C7.64706 8 9.85243 6 12.0588 6C14.2652 6 16.4706 8 16.4706 10C16.4706 12.7566 16.4706 9.35294 16.4706 12C16.4706 13.4636 17.5495 15.2508 18.5143 16.5564C19.0368 17.2635 18.5466 18.3529 17.6674 18.3529C16.452 18.3529 14.9818 18.3529 13.8235 18.3529M10.2941 18.3529C10.2941 19.2353 10.1241 21 12.0588 21C13.9936 21 13.8235 19.2353 13.8235 18.3529M10.2941 18.3529C11.6724 18.3529 12.4452 18.3529 13.8235 18.3529"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path
+                        d="M13.25 4C13.25 4.69036 12.6904 5.25 12 5.25C11.3096 5.25 10.75 4.69036 10.75 4C10.75 3.30964 11.3096 2.75 12 2.75C12.6904 2.75 13.25 3.30964 13.25 4Z"
+                        stroke="#000000" stroke-width="1.5"></path>
+                    </g>
+                  </svg>
+                </span>
+
+                <span id="number-notif">
+                  <span class="inside-number-notif">
+                    9
+                  </span>
+                </span>
+              </div>
+              <div class="notif-menu">
+                <div class="inside-notif-menu">
+                  <ul>
+                    <li class="item-notif" data-target="page1">
+                      <span>
+                        <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                              stroke="#8d8b8b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="#page1">17 new users signuped</a></li>
+                    <li class="item-notif" data-target="page2">
+                      <span><svg width="28px" height="28px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"
+                          style="enable-background:new 0 0 192 192" xml:space="preserve" fill="#000000">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M104.1 65.7v88.5c6.1-6.3 18.3-17.2 37-23.4 11.5-3.8 21.6-4.6 28.9-4.5V37.8c-8 .5-18.7 2.1-30.7 6.5-16.5 6.2-28.2 15.1-35.2 21.4zm-16.2 0v88.5c-6.1-6.3-18.3-17.2-37-23.4-11.5-3.8-21.6-4.6-28.9-4.5V37.8c8 .5 18.7 2.1 30.7 6.5 16.5 6.2 28.2 15.1 35.2 21.4z"
+                              style="fill:none;stroke:#8d8b8b;stroke-width:12;stroke-linejoin:round;stroke-miterlimit:10">
+                            </path>
+                          </g>
+                        </svg></span>
+                      <a href="#page2">17 new story up loaded</a>
+                    </li>
+                    <li class="item-notif" data-target="page3">
+                      <span>
+                        <svg width="18px" height="18px" viewBox="0 0 32 32" version="1.1"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <title>comment-1</title>
+                            <desc>Created with Sketch Beta.</desc>
+                            <defs> </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                              sketch:type="MSPage">
+                              <g id="Icon-Set" sketch:type="MSLayerGroup"
+                                transform="translate(-100.000000, -255.000000)" fill="#8d8b8b">
+                                <path
+                                  d="M116,281 C114.832,281 113.704,280.864 112.62,280.633 L107.912,283.463 L107.975,278.824 C104.366,276.654 102,273.066 102,269 C102,262.373 108.268,257 116,257 C123.732,257 130,262.373 130,269 C130,275.628 123.732,281 116,281 L116,281 Z M116,255 C107.164,255 100,261.269 100,269 C100,273.419 102.345,277.354 106,279.919 L106,287 L113.009,282.747 C113.979,282.907 114.977,283 116,283 C124.836,283 132,276.732 132,269 C132,261.269 124.836,255 116,255 L116,255 Z"
+                                  id="comment-1" sketch:type="MSShapeGroup"> </path>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="#page3">28 comment registerd</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- avatar part -->
+          <div
+            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 order-sm-1  order-lg-3  mb-sm-4 ml-md-5 ml-lg-5 ml-xl-0  mt-xl-0 ">
+            <div class="avatar-part ">
+              <span class="avatar">
+                <img src="img/personal2.jpg">
+              </span>
+              <span>
+                <p id="name-admin">admin
+                  <span id="arrow-menu" class="ml-lg-0">
+                    <svg fill="#000000" height="14px" width="14px" version="1.1" id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 1792 1792" xml:space="preserve">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M996,1314.5c-55.2,55.2-139.5,55.2-194.8,0c-2.4-2.8-2.4-2.8-2.4-2.8L154.4,670.1c-52.4-55.2-52.4-139.2,0-194.4 c55.2-52.8,139.5-52.8,194.4,0l549.7,552.1l547.2-546.9c52.4-52.4,139.5-52.4,192,0c52.4,52.8,52.4,139.5,0,192L996,1314.5z">
+                        </path>
+                      </g>
+                    </svg>
+                  </span>
+                </p>
+              </span>
+              <span id="menu-setting">
+                <!-- <span id="arrow-menu" class="ml-lg-0">
+                  <svg fill="#000000" height="24px" width="24px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 1792 1792" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M996,1314.5c-55.2,55.2-139.5,55.2-194.8,0c-2.4-2.8-2.4-2.8-2.4-2.8L154.4,670.1c-52.4-55.2-52.4-139.2,0-194.4 c55.2-52.8,139.5-52.8,194.4,0l549.7,552.1l547.2-546.9c52.4-52.4,139.5-52.4,192,0c52.4,52.8,52.4,139.5,0,192L996,1314.5z">
+                      </path>
+                    </g>
+                  </svg>
+                </span> -->
+                <!-- profile-menu -->
+                <div class="profile-menu">
+                  <div class="inside-profile-menu">
+                    <ul>
+                      <li><a href="index.html">homepage</a></li>
+                      <li><a href="#">my account</a></li>
+                      <li><a href="#" id="logout-btn">log out</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          <!-- new menu -->
+          <div class="menu-in-lg-size bg-sucess">
+
+            <ul class="ul-menu text-center">
+              <li class="item" data-target="page11" id="home">
+                <a id="first-link" href="#">Home</a>
+              </li>
+              <li class="item" data-target="page1">
+                <a id="first-link" href="#">users</a>
+              </li>
+              <li class="item" data-target="page2">
+                <a id="first-link" href="#">stories</a>
+              </li>
+              <li class="item" data-target="page3">
+                <a id="first-link" href="#">comments</a>
+              </li>
+              <li class="item" data-target="page4">
+                <a id="first-link" href="#">new story</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+        <!-- 3 boxes -->
+        <div class="row  ">
+          <!-- <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11 mt-sm-5 mt-lg-0  ">
+            <h2 class="mb-3 text-sm-center text-lg-left ml-lg-5 ">wellcome to dashboard</h2>
+          </div> -->
+
+        </div>
+        <div class="row mt-3  justify-content-center home-cloumn">
+
+          <div class="title-home">
+            Summary of Statistics
+          </div>
+          <!-- part small -->
+
+          <div
+            class="col-sm-10 col-md-8 col-lg-3 col-xl-3 mr-sm-0 mr-lg-5   mb-sm-5 part-small justify-content-md-center "
+            id="page11">
+            <div class="box-inform ">
+              <span class="icon-span-view mb-2">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="64px"
+                  height="64px" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <circle style="fill:#84DCCF;" cx="255.997" cy="206.361" r="63.823"></circle>
+                    <path style="fill:#027EA8;"
+                      d="M256.001,142.534c-17.729,0-33.76,7.238-45.326,18.909c7.427-3.026,15.536-4.726,24.051-4.726 c35.25,0,63.825,28.575,63.825,63.824c0,17.52-7.069,33.382-18.498,44.915c23.32-9.501,39.773-32.364,39.773-59.099 C319.824,171.109,291.249,142.534,256.001,142.534z">
+                    </path>
+                    <path style="fill:#84DCCF;"
+                      d="M326.916,475.839H185.085V362.374c0-39.166,31.75-70.916,70.916-70.916l0,0 c39.166,0,70.916,31.75,70.916,70.916V475.839z">
+                    </path>
+                    <path style="fill:#027EA8;"
+                      d="M256.041,291.458c-11.08,0-23.216,2.614-32.558,7.144c38.678,0.565,68.179,32.051,68.179,70.863 v106.47h35.336V362.374C326.998,323.207,295.207,291.458,256.041,291.458z">
+                    </path>
+                    <circle style="fill:#FFFFFF;" cx="433.29" cy="99.979" r="63.823"></circle>
+                    <path style="fill:#E6E6E6;"
+                      d="M433.29,36.161c-17.729,0-33.76,7.238-45.326,18.909c7.427-3.026,15.536-4.726,24.051-4.726 c35.25,0,63.824,28.575,63.824,63.824c0,17.52-7.069,33.382-18.498,44.916c23.32-9.501,39.773-32.364,39.773-59.099 C497.114,64.736,468.539,36.161,433.29,36.161z">
+                    </path>
+                    <path style="fill:#FFFFFF;"
+                      d="M504.205,369.465H362.374V255.999c0-39.166,31.75-70.916,70.916-70.916l0,0 c39.166,0,70.916,31.75,70.916,70.916L504.205,369.465L504.205,369.465z">
+                    </path>
+                    <path style="fill:#E6E6E6;"
+                      d="M433.026,185.084c-11.08,0-23.368,2.614-32.711,7.144c38.678,0.565,68.027,32.051,68.027,70.863 v106.837h35.336V255.999C503.677,216.834,472.191,185.084,433.026,185.084z">
+                    </path>
+                    <circle style="fill:#FBB03B;" cx="78.705" cy="99.979" r="63.823"></circle>
+                    <path style="fill:#F15A24;"
+                      d="M78.71,36.161c-17.729,0-33.76,7.238-45.326,18.909c7.427-3.026,15.536-4.726,24.051-4.726 c35.25,0,63.824,28.575,63.824,63.824c0,17.52-7.069,33.382-18.498,44.916c23.32-9.501,39.772-32.364,39.772-59.099 C142.534,64.736,113.96,36.161,78.71,36.161z">
+                    </path>
+                    <path style="fill:#FBB03B;"
+                      d="M149.626,369.465H7.795V255.999c0-39.166,31.75-70.916,70.916-70.916l0,0 c39.166,0,70.916,31.75,70.916,70.916V369.465z">
+                    </path>
+                    <path style="fill:#F15A24;"
+                      d="M79.058,185.084c-11.08,0-23.582,2.614-32.925,7.144c38.678,0.565,67.813,32.051,67.813,70.863 v106.837h36.375V255.999C150.319,216.834,118.223,185.084,79.058,185.084z">
+                    </path>
+                    <path
+                      d="M256.001,277.977c-39.491,0-71.619-32.129-71.619-71.619s32.129-71.618,71.619-71.618s71.618,32.129,71.618,71.618 C327.619,245.85,295.491,277.977,256.001,277.977z M256.001,150.329c-30.895,0-56.03,25.135-56.03,56.029 c0,30.895,25.135,56.03,56.03,56.03s56.029-25.135,56.029-56.03C312.03,175.464,286.894,150.329,256.001,150.329z">
+                    </path>
+                    <path
+                      d="M334.71,483.634H177.289v-121.26c0-43.401,35.31-78.71,78.71-78.71s78.71,35.31,78.71,78.71V483.634z M192.878,468.044 h126.242V362.374c0-34.805-28.315-63.121-63.12-63.121c-34.806,0-63.121,28.316-63.121,63.121v105.671H192.878z">
+                    </path>
+                    <path
+                      d="M512,377.26H354.579V255.999c0-43.401,35.31-78.71,78.709-78.71c43.402,0,78.71,35.31,78.71,78.71V377.26H512z M370.168,361.671h126.242V255.999c0-34.805-28.315-63.121-63.12-63.121s-63.121,28.316-63.121,63.121v105.672H370.168z">
+                    </path>
+                    <path
+                      d="M157.421,377.26H0V255.999c0-43.401,35.31-78.71,78.71-78.71c43.402,0,78.71,35.31,78.71,78.71V377.26z M15.589,361.671 h126.242V255.999c0-34.805-28.316-63.121-63.121-63.121s-63.121,28.316-63.121,63.121V361.671z">
+                    </path>
+                    <g>
+                      <rect x="249.055" y="318.999" style="fill:#FFFFFF;" width="14.55" height="15.589"></rect>
+                      <rect x="249.055" y="347.06" style="fill:#FFFFFF;" width="14.55" height="15.589"></rect>
+                      <rect x="249.055" y="376.16" style="fill:#FFFFFF;" width="14.55" height="15.589"></rect>
+                    </g>
+                    <rect x="426.773" y="212.992" width="13.511" height="15.589"></rect>
+                    <rect x="426.773" y="241.052" width="13.511" height="15.589"></rect>
+                    <rect x="426.773" y="269.113" width="13.511" height="15.589"></rect>
+                    <g>
+                      <rect x="72.376" y="212.992" style="fill:#FFFFFF;" width="13.511" height="15.589"></rect>
+                      <rect x="72.376" y="241.052" style="fill:#FFFFFF;" width="13.511" height="15.589"></rect>
+                      <rect x="72.376" y="269.113" style="fill:#FFFFFF;" width="13.511" height="15.589"></rect>
+                      <path style="fill:#FFFFFF;"
+                        d="M306.344,206.76h-15.589c0-19.746-15.72-35.156-34.427-35.156v-15.589 C283.348,156.015,306.344,178.699,306.344,206.76z">
+                      </path>
+                      <path style="fill:#FFFFFF;"
+                        d="M289.565,243.881l-10.397-11.616c4.355-3.896,7.677-8.848,9.61-14.319l14.699,5.194 C300.673,231.072,295.863,238.244,289.565,243.881z">
+                      </path>
+                    </g>
+                    <path
+                      d="M78.71,171.604c-39.491,0-71.618-32.129-71.618-71.619c0-39.49,32.129-71.618,71.618-71.618 c39.491,0,71.619,32.129,71.619,71.618C150.329,139.476,118.201,171.604,78.71,171.604z M78.71,43.956 c-30.895,0-56.029,25.135-56.029,56.029c0,30.895,25.135,56.03,56.029,56.03c30.895,0,56.03-25.135,56.03-56.03 C134.74,69.091,109.605,43.956,78.71,43.956z">
+                    </path>
+                    <g>
+                      <path style="fill:#FFFFFF;"
+                        d="M129.055,99.713h-15.589c0-18.707-15.11-34.484-34.857-34.484V49.641 C106.669,49.641,129.055,72.692,129.055,99.713z">
+                      </path>
+                      <path style="fill:#FFFFFF;"
+                        d="M112.275,137.508l-10.397-11.616c4.353-3.896,7.676-8.848,9.61-14.32l14.699,5.195 C123.384,124.698,118.573,131.87,112.275,137.508z">
+                      </path>
+                    </g>
+                    <path
+                      d="M433.29,171.604c-39.491,0-71.618-32.129-71.618-71.619c0-39.49,32.128-71.618,71.618-71.618s71.619,32.129,71.619,71.618 C504.909,139.476,472.78,171.604,433.29,171.604z M433.29,43.956c-30.895,0-56.029,25.135-56.029,56.029 c0,30.895,25.135,56.03,56.029,56.03c30.895,0,56.03-25.135,56.03-56.03C489.32,69.091,464.184,43.956,433.29,43.956z">
+                    </path>
+                    <path
+                      d="M483.634,99.713h-15.589c0-18.707-15.292-34.484-35.039-34.484V49.641C461.067,49.641,483.634,72.692,483.634,99.713z">
+                    </path>
+                    <path
+                      d="M466.855,137.507l-10.397-11.615c4.354-3.897,7.676-8.85,9.61-14.321l14.699,5.196 C477.962,124.699,473.152,131.87,466.855,137.507z">
+                    </path>
+                  </g>
+                </svg>
+              </span>
+              <div class="counter text-center">
+                <p class="number-animated"> numbers of users</p>
+                <span id="userCount" data-target="2500">0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-10 col-md-8 col-lg-3 col-xl-3 mr-sm-0 mr-lg-5  mb-sm-5 part-small">
+            <div class="box-inform">
+              <span class="icon-span-view mb-2">
+                <svg width="64px" height="64px" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 48 48" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#2196F3" d="M33.5,27c-2.2-3-5.2-5-9.5-5s-7.3,2-9.5,5H33.5z"></path>
+                    <path fill="#546E7A"
+                      d="M34.1,43H13.9c-1.1,0-1.9-0.8-2-1.9l-0.8-13C11.1,27,12,26,13.1,26h21.8c1.2,0,2.1,1,2,2.1l-0.8,13 C36,42.2,35.2,43,34.1,43z">
+                    </path>
+                    <circle fill="#B0BEC5" cx="34" cy="29" r="1"></circle>
+                    <g fill="#FFB74D">
+                      <circle cx="24" cy="12" r="8"></circle>
+                      <path
+                        d="M16.1,42.4L15,43.5c-0.6,0.6-1.6,0.6-2.2,0l-3.3-3.3c-0.6-0.6-0.6-1.6,0-2.2l1.1-1.1c1.3-1.3,3.1-1.3,4.4,0 l1.1,1.1C17.3,39.3,17.3,41.2,16.1,42.4z">
+                      </path>
+                      <path
+                        d="M31.9,38l1.1-1.1c1.3-1.3,3.1-1.3,4.4,0l1.1,1.1c0.6,0.6,0.6,1.6,0,2.2l-3.3,3.3c-0.6,0.6-1.6,0.6-2.2,0 l-1.1-1.1C30.7,41.2,30.7,39.3,31.9,38z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <div class="counter text-center">
+                <p class="number-animated">numbers of readers </p>
+                <span id="userCount" data-target="1200">0</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-10 col-md-8 col-lg-3 col-xl-3 mr-sm-0 mr-lg-5  mb-sm-5  part-small ">
+            <div class="box-inform">
+              <span class="icon-span-view mb-2">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="64px"
+                  height="64px" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect x="66.542" y="46.631" style="fill:#F1CE30;" width="124.806" height="405.348"></rect>
+                    <g>
+                      <rect x="66.542" y="85.846" style="fill:#D9BA2C;" width="124.806" height="61.585"></rect>
+                      <rect x="66.542" y="394.281" style="fill:#D9BA2C;" width="124.806" height="20.757"></rect>
+                      <rect x="66.542" y="358.297" style="fill:#D9BA2C;" width="124.806" height="20.757"></rect>
+                    </g>
+                    <rect x="253.763" y="46.631" style="fill:#79D5DE;" width="85.248" height="405.348"></rect>
+                    <g>
+                      <rect x="253.763" y="376.818" style="fill:#6DC0C7;" width="85.248" height="19.699"></rect>
+                      <rect x="253.763" y="91.411" style="fill:#6DC0C7;" width="85.248" height="19.699"></rect>
+                    </g>
+                    <rect x="191.354" y="23.247" style="fill:#B90B27;" width="62.408" height="428.733"></rect>
+                    <g>
+                      <rect x="191.354" y="63.083" style="fill:#A70B24;" width="62.408" height="19.972"></rect>
+                      <rect x="191.354" y="89.541" style="fill:#A70B24;" width="62.408" height="9.986"></rect>
+                      <rect x="191.354" y="368.681" style="fill:#A70B24;" width="62.408" height="35.985"></rect>
+                    </g>
+                    <rect x="370.717" y="20.957" transform="matrix(-0.9884 0.152 -0.152 -0.9884 834.1309 396.2078)"
+                      style="fill:#F1CE30;" width="62.41" height="418.056"></rect>
+                    <g>
+                      <rect x="346.529" y="62.639" transform="matrix(-0.9884 0.152 -0.152 -0.9884 762.1172 86.9917)"
+                        style="fill:#D9BA2C;" width="62.41" height="19.973"></rect>
+                      <rect x="349.791" y="88.855" transform="matrix(-0.9884 0.152 -0.152 -0.9884 771.8293 128.6952)"
+                        style="fill:#D9BA2C;" width="62.41" height="9.986"></rect>
+                      <rect x="394.2" y="364.605" transform="matrix(-0.9884 0.152 -0.152 -0.9884 904.0204 696.0892)"
+                        style="fill:#D9BA2C;" width="62.41" height="35.985"></rect>
+                    </g>
+                    <rect y="441.296" style="fill:#C17644;" width="512" height="52.053"></rect>
+                    <rect y="467.331" style="fill:#9A5F38;" width="512" height="26.026"></rect>
+                  </g>
+                </svg>
+              </span>
+              <div class="counter text-center">
+                <p class="number-animated">numbers of stories</p>
+                <span id="userCount" data-target="3000">0</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- tables -->
+        <div class="row mt-5  ">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11 ml-sm-0 ml-5  last-part mr-5 ml-xl-5" id="page1">
+            <!-- 1 -->
+            <table class="pages">
+              <caption>users</caption>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>name</th>
+                  <th>password</th>
+                  <th>Email</th>
+                  <th>Date</th>
+                  <th>number of story</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="--zi: 0">
+                  <td data-title="Two">1</td>
+                  <td data-title="Two">maryam</td>
+                  <td data-title="Three">123</td>
+                  <td data-title="four">jamali8820@yahoo.com</td>
+                  <td data-title="Two">Wensday 15:22</td>
+                  <td data-title="Two">7</td>
+
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="Two">1</td>
+                  <td data-title="Two">erik</td>
+                  <td data-title="Three">88415y</td>
+                  <td data-title="four">erikbesti@yahoo.com</td>
+                  <td data-title="Two">Wensday 15:22</td>
+                  <td data-title="Two">7</td>
+
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="Two">1</td>
+                  <td data-title="Two">maryam</td>
+                  <td data-title="Three">123</td>
+                  <td data-title="four">jamali8820@yahoo.com</td>
+                  <td data-title="Two">Wensday 15:22</td>
+                  <td data-title="Two">7</td>
+
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="Two">1</td>
+                  <td data-title="Two">maryam</td>
+                  <td data-title="Three">123</td>
+                  <td data-title="four">jamali8820@yahoo.com</td>
+                  <td data-title="Two">Wensday 15:22</td>
+                  <td data-title="Two">7</td>
+
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="Two">1</td>
+                  <td data-title="Two">maryam</td>
+                  <td data-title="Three">123</td>
+                  <td data-title="four">jamali8820@yahoo.com</td>
+                  <td data-title="Two">Wensday 15:22</td>
+                  <td data-title="Two">7</td>
+
+                </tr>
+
+
+              </tbody>
+            </table>
+
+            <!-- pigination -->
+            <div class="col-sm col-md-12 col-lg-12 mt-5">
+              <div class="pagination:container justify-content-center">
+                <div class="pagination:number arrow">
+                  <svg width="18" height="18">
+                    <use xlink:href="#left" />
+                  </svg>
+                  <span class="arrow:text">Previous</span>
+                </div>
+
+                <div class="pagination:number">
+                  1
+                </div>
+                <div class="pagination:number">
+                  2
+                </div>
+
+                <div class="pagination:number pagination:active">
+                  3
+                </div>
+
+                <div class="pagination:number">
+                  4
+                </div>
+                <div class="pagination:number">
+                  20
+                </div>
+
+                <div class="pagination:number arrow">
+                  <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#ffffff"></path> </g></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11 ml-sm-0 ml-md-0 ml-xl-5 last-part  mr-5" id="page2"
+            style="display:none;">
+            <table class="pages">
+              <caption>stories</caption>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>UserId</th>
+                  <th>Name of story</th>
+                  <th>Type</th>
+                  <th>publish</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="--zi: 0">
+                  <td data-title="One">1</td>
+                  <td data-title="Two">1885</td>
+                  <td data-title="Three">Best day of my life</td>
+                  <td>
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="One">1</td>
+                  <td data-title="Two">1885</td>
+                  <td data-title="Three">Best day of my life</td>
+                  <td>
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="One">1</td>
+                  <td data-title="Two">1885</td>
+                  <td data-title="Three">Best day of my life</td>
+                  <td>
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="One">1</td>
+                  <td data-title="Two">1885</td>
+                  <td data-title="Three">Best day of my life</td>
+                  <td>
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: 0">
+                  <td data-title="One">1</td>
+                  <td data-title="Two">1885</td>
+                  <td data-title="Three">Best day of my life</td>
+                  <td>
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- pigination -->
+            <div class="col-sm col-md-12 col-lg-12 mt-5">
+              <div class="pagination:container justify-content-center">
+                <div class="pagination:number arrow">
+                  <svg width="18" height="18">
+                    <use xlink:href="#left" />
+                  </svg>
+                  <span class="arrow:text">Previous</span>
+                </div>
+
+                <div class="pagination:number">
+                  1
+                </div>
+                <div class="pagination:number">
+                  2
+                </div>
+
+                <div class="pagination:number pagination:active">
+                  3
+                </div>
+
+                <div class="pagination:number">
+                  4
+                </div>
+
+                <div class="pagination:number">
+                  20
+                </div>
+
+                <div class="pagination:number arrow">
+                  <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#ffffff"></path> </g></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11 ml-sm-0 ml-md-0 ml-xl-5 last-part mr-5 mb-5"
+            style="display:none;" id="page3">
+            <table class="pages">
+              <caption>comments</caption>
+              <thead>
+                <tr>
+                  <th>name</th>
+                  <th>Email</th>
+                  <th>comment</th>
+                  <th>publish</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="--zi: 0">
+                  <td data-title="One">sara</td>
+                  <td data-title="Two">sara@gmail.com</td>
+                  <td data-title="Three">itas very good</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -1">
+                  <td data-title="One">sara</td>
+                  <td data-title="Two">sara@gmail.com</td>
+                  <td data-title="Three">itas very good</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -2">
+                  <td data-title="One">sara</td>
+                  <td data-title="Two">sara@gmail.com</td>
+                  <td data-title="Three">itas very good</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -3">
+                  <td data-title="One">sara</td>
+                  <td data-title="Two">sara@gmail.com</td>
+                  <td data-title="Three">itas very good</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -4">
+                  <td data-title="One">sara</td>
+                  <td data-title="Two">sara@gmail.com</td>
+                  <td data-title="Three">itas very good</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -5">
+                  <td data-title="One">sara</td>
+                  <td data-title="Two">sara@gmail.com</td>
+                  <td data-title="Three">itas very good</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- pigination -->
+            <div class="col-sm col-md-12 col-lg-12 mt-5">
+              <div class="pagination:container justify-content-center">
+                <div class="pagination:number arrow">
+                  <svg width="18" height="18">
+                    <use xlink:href="#left" />
+                  </svg>
+                  <span class="arrow:text">Previous</span>
+                </div>
+
+                <div class="pagination:number">
+                  1
+                </div>
+                <div class="pagination:number">
+                  2
+                </div>
+
+                <div class="pagination:number pagination:active">
+                  3
+                </div>
+
+                <div class="pagination:number">
+                  4
+                </div>
+
+                <div class="pagination:number">
+                  20
+                </div>
+
+                <div class="pagination:number arrow">
+                  <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#ffffff"></path> </g></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11  ml-sm-0 ml-md-0 ml-xl-5 last-part  mr-5" id="page4"
+            style="display:none;">
+            <table class="pages">
+              <caption>new story</caption>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>name of story</th>
+                  <th>type</th>
+                  <th>writer</th>
+                  <th>Permission to publish</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="--zi: 0">
+                  <td data-title="One">1</td>
+                  <td data-title="Two">jack coloni</td>
+                  <td data-title="Three">
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">jack coloni</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -1">
+                  <td data-title="One">2</td>
+                  <td data-title="Two">jack coloni</td>
+                  <td data-title="Three">
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">jack coloni</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -2">
+                  <td data-title="One">3</td>
+                  <td data-title="Two">jack coloni</td>
+                  <td data-title="Three">
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">jack coloni</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -3">
+                  <td data-title="One">4</td>
+                  <td data-title="Two">jack coloni</td>
+                  <td data-title="Three">
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">jack coloni</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+                <tr style="--zi: -4">
+                  <td data-title="One">5</td>
+                  <td data-title="Two">jack coloni</td>
+                  <td data-title="Three">
+                    <div>
+                      <select class="custom-select">
+                        <option value="option1">All</option>
+                        <option value="option2">Romantic Story</option>
+                        <option value="option3">Happy Story </option>
+                        <option value="option4">Sad Story</option>
+                        <option value="option5">Motivated Story</option>
+                        <option value="option6">Funny Story</option>
+                        <option value="option7">Real Story</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td data-title="Three">jack coloni</td>
+                  <td data-title="Three">
+                    <label class="checkbox-btn">
+                      <input type="checkbox" checked>
+                      <span></span>
+
+                    </label>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+
+            <!-- pigination -->
+            <div class="col-sm col-md-12 col-lg-12 mt-5">
+              <div class="pagination:container justify-content-center">
+                <div class="pagination:number arrow">
+                  <svg width="18" height="18">
+                    <use xlink:href="#left" />
+                  </svg>
+                  <span class="arrow:text">Previous</span>
+                </div>
+
+                <div class="pagination:number">
+                  1
+                </div>
+                <div class="pagination:number">
+                  2
+                </div>
+
+                <div class="pagination:number pagination:active">
+                  3
+                </div>
+
+                <div class="pagination:number">
+                  4
+                </div>
+
+                <div class="pagination:number">
+                  20
+                </div>
+
+                <div class="pagination:number arrow">
+                  <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#ffffff"></path> </g></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-xl-12 bg-warning ">
+        <div class="footer-dashbord">
+          <p>Designed by Maryam jamali</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/adminsignIn.js"></script>
+
+
+</html>
